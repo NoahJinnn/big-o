@@ -20,6 +20,7 @@ public class Dijkstra {
             if(l != null) {
                 for(MyNode n : l) {
                     if(cur.val + n.val < dist[n.id]) {
+                        // Relaxation
                         int smallerDist = cur.val + n.val;
                         dist[n.id] = smallerDist;
                         path[n.id] = cur.id;
